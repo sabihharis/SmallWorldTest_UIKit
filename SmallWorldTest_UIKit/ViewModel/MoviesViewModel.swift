@@ -16,5 +16,17 @@ struct MoviesViewModel {
             _ = completion(result)
         }
     }
+    
+    func getMovieById(id:Int,completion: @escaping(_ result: MovieDetailResponse?)-> Void) {
+
+        let employeeRequest = MovieRequest(movieId: id)
+        let employeeResource = MoviesResources()
+        
+        employeeResource.getMovieDetailsById(movieRequest: employeeRequest) { result in
+            _ = completion(result)
+
+        }
+
+    }
 }
 

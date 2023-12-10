@@ -14,7 +14,8 @@ struct Constants {
 }
 
 struct ApiEndpoints {
-    static let allMovies = "https://api.themoviedb.org/3/movie/popular"
+    static let getAllMovies = "https://api.themoviedb.org/3/movie/popular"
+    static let getMovieDetailById = "https://api.themoviedb.org/3/movie"
 }
 
 struct ApiKey {

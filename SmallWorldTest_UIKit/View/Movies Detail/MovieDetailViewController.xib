@@ -4,9 +4,75 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="SmallWorldTest_UIKit" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="SmallWorldTest_UIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="movieLanguage" destination="Pw0-NY-Xg7" id="PlD-ag-xg8"/>
+                <outlet property="movieName" destination="4AS-mw-oTR" id="JXE-3F-ujk"/>
+                <outlet property="moviePoster" destination="ldo-9a-Z4f" id="FMr-1k-5qg"/>
+                <outlet property="movieReleaseDate" destination="SYw-2D-0gP" id="plS-D0-z4B"/>
+                <outlet property="movieStatus" destination="vhU-TF-Dh1" id="li4-MN-Rjk"/>
+                <outlet property="view" destination="4RB-oR-Rld" id="D7W-t1-iBX"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4RB-oR-Rld">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldo-9a-Z4f">
+                    <rect key="frame" x="0.0" y="59" width="393" height="426"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-zG-rZu">
+                    <rect key="frame" x="175" y="504.99999999999994" width="43.333333333333343" height="96.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AS-mw-oTR">
+                            <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw0-NY-Xg7">
+                            <rect key="frame" x="0.0" y="25.333333333333371" width="43.333333333333336" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhU-TF-Dh1">
+                            <rect key="frame" x="0.0" y="50.666666666666629" width="43.333333333333336" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYw-2D-0gP">
+                            <rect key="frame" x="0.0" y="76" width="43.333333333333336" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="NmN-O3-xtL"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ldo-9a-Z4f" firstAttribute="height" secondItem="4RB-oR-Rld" secondAttribute="height" multiplier="0.5" id="7mH-Zg-jod"/>
+                <constraint firstItem="3lb-zG-rZu" firstAttribute="centerX" secondItem="4RB-oR-Rld" secondAttribute="centerX" id="97o-kZ-JM8"/>
+                <constraint firstItem="ldo-9a-Z4f" firstAttribute="leading" secondItem="NmN-O3-xtL" secondAttribute="leading" id="Jv6-bK-VMa"/>
+                <constraint firstItem="3lb-zG-rZu" firstAttribute="top" secondItem="ldo-9a-Z4f" secondAttribute="bottom" constant="20" id="S1W-wK-jvD"/>
+                <constraint firstItem="ldo-9a-Z4f" firstAttribute="top" secondItem="NmN-O3-xtL" secondAttribute="top" id="WBu-NJ-b0A"/>
+                <constraint firstItem="ldo-9a-Z4f" firstAttribute="trailing" secondItem="NmN-O3-xtL" secondAttribute="trailing" id="oZy-gr-fHZ"/>
+            </constraints>
+            <point key="canvasLocation" x="-889.3129770992366" y="-256.33802816901408"/>
+        </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

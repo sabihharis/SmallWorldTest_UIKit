@@ -34,10 +34,15 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationItem()
         
         getMoviesData()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupNavigationItem()
     }
     
     // MARK: - Class Level Functions
@@ -84,6 +89,8 @@ extension MoviesViewController : UITableViewDataSource {
 extension MoviesViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController : MovieDetailViewController = MovieDetailViewController.initWithNib()
+        detailViewController.movieId = moviesTableData?.results?[indexPath.row].id ?? 0
+        detailViewController.navigationTitle = moviesTableData?.results?[indexPath.row].originalTitle ?? ""
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

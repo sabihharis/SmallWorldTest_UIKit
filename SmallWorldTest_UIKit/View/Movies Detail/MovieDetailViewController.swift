@@ -36,15 +36,19 @@ class MovieDetailViewController: UIViewController {
         
         getData()
     }
+    
+    deinit {
+        print("MovieDetailViewController is deinitialized successfully")
+    }
 
 
     // MARK: - Class Level Fuctions
  
     private func getData() {
-        moviesViewModel.getMovieById(id: self.movieId) { result in
-            self.movieData = result
+        moviesViewModel.getMovieById(id: self.movieId) { [weak self] result in
+            self?.movieData = result
             DispatchQueue.main.async {
-                self.setData()
+                self?.setData()
 
             }
         }

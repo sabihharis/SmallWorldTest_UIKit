@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Constants {
-    static let ErrorAlertTitle = "Error"
-    static let OkAlertTitle = "Ok"
-    static let CancelAlertTitle = "Cancel"
-}
-
 struct ApiEndpoints {
     static let getAllMovies = "https://api.themoviedb.org/3/movie/popular"
     static let getMovieDetailById = "https://api.themoviedb.org/3/movie"

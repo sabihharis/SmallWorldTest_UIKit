@@ -25,7 +25,7 @@ class MoviesViewController: UIViewController {
     private var moviesCell = "MoviesTableViewCell"
     private var navigationTitle = "Movies"
     
-    let moviesViewModel : MoviesViewModel = MoviesViewModel()
+    var moviesViewModel : MoviesViewModel? = MoviesViewModel()
     var moviesTableData : MovieResponse? = nil
     
     
@@ -45,6 +45,10 @@ class MoviesViewController: UIViewController {
         setupNavigationItem()
     }
     
+    
+    
+    
+    
     // MARK: - Class Level Functions
     
     func setupNavigationItem() {
@@ -54,12 +58,12 @@ class MoviesViewController: UIViewController {
     }
     
     func getMoviesData() {
-        moviesViewModel.getMovies { movieResponse in
+        moviesViewModel?.getMovies { [weak self] movieResponse in
             if(movieResponse != nil) {
-                self.moviesTableData = movieResponse
+                self?.moviesTableData = movieResponse
                 
                 DispatchQueue.main.async {
-                    self.moviesTable.reloadData()
+                    self?.moviesTable.reloadData()
                 }
             }
             

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="SmallWorldTest_UIKit" customModuleProvider="target">
             <connections>
                 <outlet property="moviesTable" destination="PX4-R7-ddC" id="mnY-9g-TmZ"/>
+                <outlet property="searchBar" destination="QQA-Kv-0sh" id="cBi-yu-Te9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,19 +22,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PX4-R7-ddC">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="QQA-Kv-0sh">
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zaA-As-Pg8"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="k5b-ac-Bpz"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="QQA-Kv-0sh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4Uw-eX-9yA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PX4-R7-ddC" secondAttribute="bottom" id="4xn-zh-TB8"/>
+                <constraint firstItem="PX4-R7-ddC" firstAttribute="top" secondItem="QQA-Kv-0sh" secondAttribute="bottom" id="87v-gs-Ie1"/>
                 <constraint firstItem="PX4-R7-ddC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wrs-wS-lgA"/>
+                <constraint firstItem="QQA-Kv-0sh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YEP-uA-wkE"/>
+                <constraint firstItem="QQA-Kv-0sh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bkx-Mw-NPt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PX4-R7-ddC" secondAttribute="trailing" id="hCy-ZO-Bgb"/>
-                <constraint firstItem="PX4-R7-ddC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="re7-Gt-9C8"/>
             </constraints>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
